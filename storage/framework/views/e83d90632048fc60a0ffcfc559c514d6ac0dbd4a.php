@@ -1,0 +1,1 @@
+<h1>Thêm sane phẩm</h1><?php /**PATH C:\xampp\htdocs\laravel\duan1\resources\views/admin/product/addsp.blade.php ENDPATH**/ ?>
