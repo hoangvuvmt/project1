@@ -23,61 +23,39 @@
 </style>
 <div class="listSP">
     <h3>Danh sách sản phẩm</h3>
-
 <table class="table">
     <thead class="table-light ">
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Mã sản phẩm </th>
         <th scope="col">Tên sản phẩm</th>
-        <th scope="col">Mã loại sản phẩm</th>
+        
         <th scope="col">Đơn giá</th>
-        <th scope="col">Ghi chú</th>
+        <th scope="col">Mã sản phẩm </th>
+        <th scope="col">Mã loại sản phẩm </th>
+
+        <th scope="col">Số lượng</th>
             <th scope="col">Hình ảnh</th>
         <th scope="col">Action</th>
 
       </tr>
     </thead>
     <tbody>
+      @foreach ($result as $k) 
       <tr>
-        <th scope="row">1</th>
-        <td>SD1</td>
-        <td>Quạt điện thông minh </td>
-        <td>@mdo</td>
-        <td>600.000 đ</td>
-        <td>Quạt điện thông minh thế hệ mới</td>
+        <th scope="row">{{$k->product_id}}</th>
+        
+        <td>{{$k->product_name}} </td>
+        <td>{{$k->Price}}</td>
+        <td>{{$k->product_code}}</td>
+        <td>{{$k->category_id}}</td>
+        <td>{{$k->quantity}}</td>
         <td><img src="{{asset('/images/sp1.jpg')}}" alt=""></td>
         <td> 
 <button type="button" class="btn btn-outline-info">Sửa</button>
 <button type="button" class="btn btn-outline-danger">Xóa</button>
         </td>
       </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>SD1</td>
-        <td>Quạt điện thông minh </td>
-        <td>@mdo</td>
-        <td>600.000 đ</td>
-        <td>Quạt điện thông minh thế hệ mới</td>
-        <td><img src="{{asset('/images/sp1.jpg')}}" alt=""></td>
-        <td> 
-<button type="button" class="btn btn-outline-info">Sửa</button>
-<button type="button" class="btn btn-outline-danger">Xóa</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>SD1</td>
-        <td>Quạt điện thông minh </td>
-        <td>@mdo</td>
-        <td>600.000 đ</td>
-        <td>Quạt điện thông minh thế hệ mới</td>
-        <td><img src="{{asset('/images/sp1.jpg')}}" alt=""></td>
-        <td> 
-<button type="button" class="btn btn-outline-info">Sửa</button>
-<button type="button" class="btn btn-outline-danger">Xóa</button>
-        </td>
-      </tr>
+      @endforeach
     </tbody>
   </table>
 </div>

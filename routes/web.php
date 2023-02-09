@@ -1,6 +1,6 @@
 <?php
-use App\Http\Controllers\admin\listSPController;
-
+// use App\Http\Controllers\admin\listSPController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 /*
@@ -17,5 +17,5 @@ use Illuminate\Support\Str;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/product',[listSPController::class, 'list']);
-Route::get('/addsp',[listSPController::class, 'addsp']);
+Route::get('/product',[ProductController::class, 'index']);
+// Route::get('product','ProductController');
